@@ -129,7 +129,11 @@ module.exports = {
   solidity: "0.8.0",
   networks: {
     goerli: {
-      url: process.env.STAGING_NODE,
+      url: process.env.GOERLI_NETWORK,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    matic: {
+      url: process.env.MATIC_NETWORK,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
